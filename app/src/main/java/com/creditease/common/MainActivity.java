@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.creditease.common.view.SoftBoard;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void init(){
         findViewById(R.id.btn_sms).setOnClickListener(this);
+        findViewById(R.id.btn_softboard).setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent mIntent = new Intent();
                 mIntent.setClass(MainActivity.this,SMSAutoGetActivity.class);
                 startActivity(mIntent);
+                break;
+            case R.id.btn_softboard:
+                Intent mIntent1 = new Intent();
+                mIntent1.setClass(MainActivity.this,SoftBoardActivity.class);
+                startActivity(mIntent1);
                 break;
             default:
                 break;

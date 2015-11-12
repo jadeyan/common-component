@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CommonComponent</string>
     <string name="action_settings">Settings</string>
+    <string name="sms_get">自动获取短信验证码</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.creditease.common;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +25,23 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        init();
+    }
+
+    private void init(){
+        findViewById(R.id.btn_sms).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_sms:
+                Intent mIntent = new Intent();
+                mIntent.setClass(MainActivity.this,SMSAutoGetActivity.class);
+                startActivity(mIntent);
+                break;
+            default:
+                break;
+        }
     }
 }

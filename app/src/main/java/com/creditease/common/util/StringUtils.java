@@ -15,10 +15,9 @@
  */
 package com.creditease.common.util;
 
-import java.util.Locale;
-import java.util.regex.Pattern;
-
 import android.text.TextUtils;
+
+import java.util.Locale;
 
 /**
  * 字符串操作工具包 结合android.text.TextUtils使用

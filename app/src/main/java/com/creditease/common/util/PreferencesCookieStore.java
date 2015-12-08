@@ -15,14 +15,20 @@
  */
 package com.creditease.common.util;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.text.TextUtils;
 import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.cookie.BasicClientCookie;
 
-import java.io.*;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.text.TextUtils;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

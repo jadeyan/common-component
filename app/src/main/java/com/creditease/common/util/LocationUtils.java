@@ -15,8 +15,6 @@
  */
 package com.creditease.common.util;
 
-import java.io.InputStream;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -31,6 +29,8 @@ import org.json.JSONObject;
 
 import android.text.TextUtils;
 import android.util.Log;
+
+import java.io.InputStream;
 
 /**
  * 根据经纬度查询地址信息和根据地址信息查询经纬度

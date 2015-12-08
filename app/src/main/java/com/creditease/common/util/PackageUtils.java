@@ -15,9 +15,6 @@
  */
 package com.creditease.common.util;
 
-import java.io.File;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
@@ -32,6 +29,9 @@ import android.os.Build;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+
+import java.io.File;
+import java.util.List;
 
 /**
  * PackageUtils

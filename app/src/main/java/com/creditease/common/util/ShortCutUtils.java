@@ -15,6 +15,8 @@
  */
 package com.creditease.common.util;
 
+import com.creditease.common.R;
+
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;

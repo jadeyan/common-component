@@ -15,14 +15,14 @@
  */
 package com.creditease.common.util;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * 应用配置工具类
@@ -189,7 +189,8 @@ public final class SettingUtils {
             return cls.getMethod("apply");
         } catch (NoSuchMethodException unused) {
             if (DEBUG) {
-                LogUtils.d(TAG, "Failed to retrieve Editor.apply(); probably doesn't exist on this phone's OS.  Using Editor.commit() instead.");
+                LogUtils.d(TAG, "Failed to retrieve Editor.apply(); probably doesn't exist on " +
+                        "this phone's OS.  Using Editor.commit() instead.");
             }
             return null;
         }
@@ -202,7 +203,8 @@ public final class SettingUtils {
                 return;
             } catch (InvocationTargetException e) {
                 if (DEBUG) {
-                    LogUtils.d(TAG, "Failed while using Editor.apply().  Using Editor.commit() instead.");
+                    LogUtils.d(TAG, "Failed while using Editor.apply().  Using Editor.commit() " +
+                            "instead.");
                 }
             } catch (IllegalAccessException e) {
                 if (DEBUG) {

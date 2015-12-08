@@ -15,11 +15,11 @@
  */
 package com.creditease.common.util;
 
-import java.io.File;
-import java.math.BigDecimal;
-
 import android.content.Context;
 import android.os.Environment;
+
+import java.io.File;
+import java.math.BigDecimal;
 
 /**
  * 本应用数据清除管理器

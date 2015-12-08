@@ -128,7 +128,8 @@ public class RegExpUtil {
      * 验证是否是地址
      */
     public static boolean addressValidation(String hanzi) {
-        Pattern pattern = Pattern.compile("([a-zA-Z0-9]|[-—‐]|[\u002d\u2014\u2010]|[\u4E00-\u9FA5])*");
+        Pattern pattern = Pattern.compile("([a-zA-Z0-9]|[-—‐]|[\u002d\u2014\u2010]|[\u4E00-\u9FA5" +
+                "])*");
         Matcher invalid = pattern.matcher(hanzi);
         return invalid.matches();
     }
@@ -137,7 +138,8 @@ public class RegExpUtil {
      * 验证车牌号，要求字母大写，如：鄂A-66666,中间可为"·"或"-"或"－"或空格或无
      */
     public static boolean carCardValidation(String str){
-        Pattern pattern = Pattern.compile("[\u4e00-\u9fa5]{1}[A-Z]{1}[\u0020\u002d\u2014\u2010\u003A\uFF1A·]?[A-Z0-9]{5}");
+        Pattern pattern = Pattern.compile("[\u4e00-\u9fa5]{1}[A-Z]{1}[\u0020\u002d\u2014\u2010" +
+                "\u003A\uFF1A·]?[A-Z0-9]{5}");
         Matcher invalid = pattern.matcher(str);
         return invalid.matches();
     }

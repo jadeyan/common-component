@@ -15,12 +15,12 @@
  */
 package com.creditease.common.util;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * IMSI工具类

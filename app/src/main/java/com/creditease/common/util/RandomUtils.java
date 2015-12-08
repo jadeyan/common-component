@@ -15,9 +15,9 @@
  */
 package com.creditease.common.util;
 
-import java.util.Random;
-
 import android.text.TextUtils;
+
+import java.util.Random;
 
 /**
  * Random Utils

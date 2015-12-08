@@ -15,8 +15,6 @@
  */
 package com.creditease.common.util;
 
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.DownloadManager;
@@ -24,6 +22,8 @@ import android.app.DownloadManager.Request;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+
+import java.lang.reflect.Method;
 
 /**
  * DownloadManagerPro

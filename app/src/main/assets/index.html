@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <title>优酷视频</title>
+    </head>
+    <body style="padding:0px; margin:0px; background:#000;">
+        <div id="youkuplayer" style=" width:100%; margin-top:40%;"></div>
+        <script type="text/javascript" src="http://player.youku.com/jsapi">
+            player = new YKU.Player('youkuplayer',{
+            styleid: '0',
+            client_id: 'bbc5ba5c1999eab9',
+            vid: 'XMTM4OTU3MTI0OA==',
+            embsig: 'VERSION_TIMESTAMP_SIGNATURE',
+            show_related: false
+        });
+        </script>
+        <script type="text/javascript">
+        document.getElementById("youkuplayer").style.height=document.getElementById("youkuplayer").offsetWidth*0.8+"px";
+        </script>
+    </body>
+</html>

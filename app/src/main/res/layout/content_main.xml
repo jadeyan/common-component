@@ -31,4 +31,19 @@
             android:layout_below="@+id/btn_sms"
             android:layout_alignParentStart="true"
             android:text="自定义软键盘"/>
+
+    <Button
+            android:id="@+id/btn_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_softboard"
+            android:layout_alignParentStart="true"
+            android:text="WebView"/>
+    <Button
+            android:id="@+id/btn_webVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_webview"
+            android:layout_alignParentStart="true"
+            android:text="Web Video"/>
 </RelativeLayout>

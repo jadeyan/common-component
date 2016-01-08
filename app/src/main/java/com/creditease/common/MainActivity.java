@@ -1,11 +1,14 @@
 package com.creditease.common;
 
+import com.creditease.common.net.WebVideoFullScreenActivity;
+import com.creditease.common.net.WebViewActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,23 +17,35 @@ public class MainActivity extends Activity implements View.OnClickListener{
         init();
     }
 
-    private void init(){
+    private void init() {
         findViewById(R.id.btn_sms).setOnClickListener(this);
         findViewById(R.id.btn_softboard).setOnClickListener(this);
+        findViewById(R.id.btn_webview).setOnClickListener(this);
+        findViewById(R.id.btn_webVideo).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_sms:
-                Intent mIntent = new Intent();
-                mIntent.setClass(MainActivity.this,SMSAutoGetActivity.class);
-                startActivity(mIntent);
+                Intent intent1 = new Intent();
+                intent1.setClass(MainActivity.this, SMSAutoGetActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.btn_softboard:
-                Intent mIntent1 = new Intent();
-                mIntent1.setClass(MainActivity.this,SoftBoardActivity.class);
-                startActivity(mIntent1);
+                Intent intent2 = new Intent();
+                intent2.setClass(MainActivity.this, SoftBoardActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.btn_webview:
+                Intent intent3 = new Intent();
+                intent3.setClass(MainActivity.this, WebViewActivity.class);
+                startActivity(intent3);
+                break;
+            case R.id.btn_webVideo:
+                Intent intent4 = new Intent();
+                intent4.setClass(MainActivity.this, WebVideoFullScreenActivity.class);
+                startActivity(intent4);
                 break;
             default:
                 break;

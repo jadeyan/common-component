@@ -47,6 +47,10 @@
         </activity>
         <activity android:name=".net.WebVideoFullScreenActivity">
         </activity>
+        <activity
+                android:name=".EventBusActivity"
+                android:label="EventBusActivity">
+        </activity>
     </application>
 
 </manifest>

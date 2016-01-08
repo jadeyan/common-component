@@ -46,4 +46,11 @@
             android:layout_below="@+id/btn_webview"
             android:layout_alignParentStart="true"
             android:text="Web Video"/>
+    <Button
+            android:id="@+id/btn_eventBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_webVideo"
+            android:layout_alignParentStart="true"
+            android:text="EventBus"/>
 </RelativeLayout>

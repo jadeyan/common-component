@@ -1,0 +1,93 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/receive_activity_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/btnPostThread"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodPost"
+            android:textAllCaps="false"
+            android:text="Post-Thread(methodPost)"
+            />
+
+        <Button
+            android:id="@+id/btnMainThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodMain"
+            android:textAllCaps="false"
+            android:text="Main-Thread(methodMain)"
+            />
+
+        <Button
+            android:id="@+id/btnBackThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodBack"
+            android:textAllCaps="false"
+            android:text="Back-Thread(methodBack)"
+            />
+
+        <Button
+            android:id="@+id/btnAsyncThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodAsync"
+            android:textAllCaps="false"
+            android:text="Async-Thread(methodAsync)"
+            />
+
+        <Button
+            android:id="@+id/btnsubAsyncThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodSubAsync"
+            android:textAllCaps="false"
+            android:text="SubAsync-Thread(methodSubAsync)"
+            />
+
+        <Button
+            android:id="@+id/btnsubBackThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodSubBack"
+            android:textAllCaps="false"
+            android:text="SubBack-Thread(methodSubBack)"
+            />
+
+        <Button
+            android:id="@+id/btnsubMainThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodSubMain"
+            android:textAllCaps="false"
+            android:text="SubMain-Thread(methodSubMain)"
+            />
+
+        <Button
+            android:id="@+id/btnsubPostThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="methodSubPost"
+            android:textAllCaps="false"
+            android:text="SubPost-ThreadDemo(methodSubPost)"
+            />
+
+    </LinearLayout>
+</ScrollView>

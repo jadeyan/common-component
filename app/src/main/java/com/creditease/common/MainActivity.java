@@ -23,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btn_webview).setOnClickListener(this);
         findViewById(R.id.btn_webVideo).setOnClickListener(this);
         findViewById(R.id.btn_eventBus).setOnClickListener(this);
+        findViewById(R.id.btn_handler).setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +53,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent5 = new Intent();
                 intent5.setClass(MainActivity.this, EventBusActivity.class);
                 startActivity(intent5);
+                break;
+            case R.id.btn_handler:
+                Intent intent6 = new Intent();
+                intent6.setClass(MainActivity.this, HandlerActivity.class);
+                startActivity(intent6);
                 break;
             default:
                 break;

@@ -13,8 +13,8 @@ import android.widget.TextView;
 import com.creditease.common.R;
 
 /**
- * 类描述：$Tosat show as popupwindow
- * 类名称：$ToastUtils
+ * 类描述：Tosat show as popupwindow
+ * 类名称：ToastUtils
  *
  * @version: 1.0
  * @author: George

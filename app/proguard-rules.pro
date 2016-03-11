@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class de.greenrobot.event.** { *;}
+-keepclassmembers class ** {
+    public void onEvent*(**);
+    void onEvent*(**);
+}

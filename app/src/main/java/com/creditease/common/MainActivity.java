@@ -2,6 +2,7 @@ package com.creditease.common;
 
 import com.creditease.common.net.WebVideoFullScreenActivity;
 import com.creditease.common.net.WebViewActivity;
+import com.creditease.common.view.ListViewLoadingActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +19,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void init() {
+        findViewById(R.id.btn_listview).setOnClickListener(this);
         findViewById(R.id.btn_crashhandler).setOnClickListener(this);
         findViewById(R.id.btn_sms).setOnClickListener(this);
         findViewById(R.id.btn_softboard).setOnClickListener(this);
@@ -31,6 +33,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_crashhandler:
+                android.util.Log.e("TAG", "----:" + o.toString());
+                break;
             case R.id.btn_sms:
                 Intent intent1 = new Intent();
                 intent1.setClass(MainActivity.this, SMSAutoGetActivity.class);
@@ -61,8 +66,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 intent6.setClass(MainActivity.this, HandlerActivity.class);
                 startActivity(intent6);
                 break;
-            case R.id.btn_crashhandler:
-                android.util.Log.e("TAG", "----:" + o.toString());
+            case R.id.btn_listview:
+                Intent intent7 = new Intent();
+                intent7.setClass(MainActivity.this, ListViewLoadingActivity.class);
+                startActivity(intent7);
+                break;
             default:
                 break;
         }

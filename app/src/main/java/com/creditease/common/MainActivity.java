@@ -2,6 +2,7 @@ package com.creditease.common;
 
 import com.creditease.common.net.WebVideoFullScreenActivity;
 import com.creditease.common.net.WebViewActivity;
+import com.creditease.common.service.FunctionBallService;
 import com.creditease.common.view.ListViewLoadingActivity;
 
 import android.app.Activity;
@@ -15,6 +16,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
+        Intent intent = new Intent(MainActivity.this, FunctionBallService.class);
+        startService(intent);
         init();
     }
 
@@ -30,6 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private Object o = null;
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -74,5 +78,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        Intent intent = new Intent(MainActivity.this, FunctionBallService.class);
+        stopService(intent);
+        super.onDestroy();
     }
 }

@@ -18,6 +18,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void init() {
+        findViewById(R.id.btn_crashhandler).setOnClickListener(this);
         findViewById(R.id.btn_sms).setOnClickListener(this);
         findViewById(R.id.btn_softboard).setOnClickListener(this);
         findViewById(R.id.btn_webview).setOnClickListener(this);
@@ -26,6 +27,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btn_handler).setOnClickListener(this);
     }
 
+    private Object o = null;
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -59,6 +61,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 intent6.setClass(MainActivity.this, HandlerActivity.class);
                 startActivity(intent6);
                 break;
+            case R.id.btn_crashhandler:
+                android.util.Log.e("TAG", "----:" + o.toString());
             default:
                 break;
         }
